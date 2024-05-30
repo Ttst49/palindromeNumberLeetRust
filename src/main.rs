@@ -1,15 +1,12 @@
-fn is_palindrome(number: i32) {
-    let mut forward_numbers:i32;
-    let mut backward_numbers:i32;
-    for sub_number in number {
-        println!("{}",sub_number)
-    }
+fn is_palindrome(number: i32) -> bool {
+    number.to_string().chars().rev().eq(number.to_string().chars())
 }
 
 
 
 fn main() {
-    let x = 3628;
-    is_palindrome(x);
+    let x = 3663;
+    let result = is_palindrome(x);
+    println!("{}",result)
 }
 
